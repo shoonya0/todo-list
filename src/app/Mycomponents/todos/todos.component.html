@@ -1,0 +1,7 @@
+<!-- here *ngfor is a directive (which is a custome HTML attribute) -->
+<div *ngFor="let todo of todos">
+    <!-- <li>{{todo.sno}} - {{todo.title}} - {{todo.desc}}</li> -->
+    <!-- here todo-item do not accept our object so, we have to use an input decoractor -->
+    <!-- for that we have to make changes in todo-item.component.ts -->
+    <app-todo-item [todo]="todo"></app-todo-item>
+</div>
