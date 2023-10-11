@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-list';
+  title = 'Todo-list';
   // constructor(){
   //   setInterval(() => {
   //     if(this.title==="todo-list")
@@ -29,5 +29,6 @@ export class AppComponent {
 // -> in scripts add -> "./node_modules/bootstrap/dist/js/bootstrap.js"
 
 // to genrate new component -> ng generate component "file name eg:: Mycomponent/todos "
+// ,,         ,,         ,, -> ng g c "file name eg:: Mycomponent/todos "
 
 // in most of the cases we do devolepment on app folder only

@@ -36,4 +36,20 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  // todo is type of Todo
+  deleteTodo(todo :Todo){
+    // here we are finding the index of todo int todos for type Todo
+    const index = this.todos.indexOf(todo);
+
+    // removing 1 element from index
+    this.todos.splice(index,1);
+    console.log(todo);
+  }
+  
+  // adding todo whenever an event emitter is fire from add-todo.component
+  addTodo(todo :Todo){
+    console.log(todo);
+    this.todos.push(todo);
+  }
 }

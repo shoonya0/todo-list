@@ -1,7 +1,13 @@
+<app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+<h4>Yours Todos</h4>
+
 <!-- here *ngfor is a directive (which is a custome HTML attribute) -->
 <div *ngFor="let todo of todos">
     <!-- <li>{{todo.sno}} - {{todo.title}} - {{todo.desc}}</li> -->
     <!-- here todo-item do not accept our object so, we have to use an input decoractor -->
     <!-- for that we have to make changes in todo-item.component.ts -->
-    <app-todo-item [todo]="todo"></app-todo-item>
+    <!-- here we are sending [todo]="todo" -->
+    <!-- here we are listining (todoDelete)="deleteTodo" from todo-item -->
+    <!-- here we had make our own event (todoDelete) meaning when we click a button in todo-item then we know it throw this in parent component -->
+    <app-todo-item [todo]="todo"  (todoDelete)="deleteTodo($event)"></app-todo-item>
 </div>
